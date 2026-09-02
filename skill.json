@@ -1,0 +1,35 @@
+{
+  "name": "genpark-agent-session-replay-behavioral-audit-recorder-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Agent session replay behavioral audit recorder capturing action trajectories, oscillation anomalies, and execution step replays.",
+  "author": "genpark",
+  "category": "agent-observability",
+  "tags": [
+    "agentops",
+    "session-replay",
+    "trajectory-audit",
+    "behavioral-telemetry",
+    "agent-debugging"
+  ],
+  "inputs": {
+    "session_id": {
+      "type": "string"
+    },
+    "raw_events_stream": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "recorded_session_id": {
+      "type": "string"
+    },
+    "steps_logged_count": {
+      "type": "integer"
+    },
+    "interactive_session_replay_player_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
